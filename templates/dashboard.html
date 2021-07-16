@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Placement App</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+  <link href="{% static 'Scaffold/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'Scaffold/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'Scaffold/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'Scaffold/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'Scaffold/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'Scaffold/assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'Scaffold/assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'Scaffold/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'Scaffold/assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- Script file -->
+  <script src="{% static 'Scaffold/assets/js/main.js' %}" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+
+   <div class="container d-flex">
+
+      <div class="logo mr-auto">
+
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="dashboard.html"><img src="{% static 'images/logo.png' %}" alt="" class="img-fluid"></a>
+      </div>
+
+    <nav class="nav-menu d-none d-lg-block">
+
+        <ul>
+          <li class="active"><a href="#dashboard">Dashboard</a></li>
+          <li class="drop-down"><a href="">Team</a>
+            <ul>
+              <li><a href="#ourvision">Our Vision</a></li>
+              <li><a href="#ourmission">Our Mission</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contactus">Contact Us</a></li>
+          <li><form action="orderplacement" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order Placement" class="btn-buy"/>
+                </form></li>
+          <li><a href="{% url 'register' %}">Register</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    <div class="header-social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+    </div>
+
+    </div>
+
+</header><!-- End Header -->
+
+
+<!-- ======= About Us (Hero Section) ======= -->
+  <section id="hero">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" >
+          <div>
+            <h1>Digico Labs (Pvt) Ltd. Order Placement App</h1>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque congue massa.
+                Nulla in mi eu erat posuere hendrerit ac varius ligula. Nullam commodo velit cursus auctor pharetra.
+                Proin felis leo, molestie vel nulla vel, egestas commodo magna. Vestibulum ante ipsum primis in faucibus
+                orci luctus et ultrices posuere cubilia curae; Nam lorem lorem, euismod sit amet interdum eget, malesuada
+                sed arcu. Integer nec leo lectus.</h6>
+            <br/>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" >
+          <img src="{% static 'images/orderplacement2.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End About Us -->
+
+
+
+
+<main id="main">
+
+    <!-- ======= Application Features (About Section) ======= -->
+    <section id="about" class="about">
+
+      <!-- ======= How We Operate Images ======= -->
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-lg-6" >
+            <img src="{% static 'images/orderplacement1.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-contents-center" >
+            <div class="content pt-4 pt-lg-0">
+              <h2>How to place an order?</h2>
+              <p class="font-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris scelerisque congue massa. Nulla in mi eu erat posuere
+                  hendrerit ac varius ligula. Nullam commodo velit cursus auctor pharetra.
+                  Proin felis leo, molestie vel nulla vel, egestas commodo magna.
+                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                  Nam lorem lorem, euismod sit amet interdum eget, malesuada sed arcu. Integer nec leo lectus.</p>
+
+
+              <button type="button" class="btn btn-link">more details</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- ======= How We Extract Data ======= -->
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-contents-center" >
+            <div class="content pt-4 pt-lg-0">
+              <h2>Our Offers</h2>
+              <p class="font-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris scelerisque congue massa. Nulla in mi eu erat posuere
+                  hendrerit ac varius ligula. Nullam commodo velit cursus auctor pharetra.
+                  Proin felis leo, molestie vel nulla vel, egestas commodo magna.
+                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                  Nam lorem lorem, euismod sit amet interdum eget, malesuada sed arcu. Integer nec leo lectus.
+              </p>
+
+
+              <button type="button" class="btn btn-link">more details</button>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6" >
+            <img src="{% static 'images/offers.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ======= How We Generate Reports & Analyze ======= -->
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-lg-6" >
+            <img src="{% static 'images/consultation.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-contents-center" >
+            <div class="content pt-4 pt-lg-0">
+              <h2>Get Support from Consultants</h2>
+              <p class="font-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris scelerisque congue massa. Nulla in mi eu erat posuere
+                  hendrerit ac varius ligula. Nullam commodo velit cursus auctor pharetra.
+                  Proin felis leo, molestie vel nulla vel, egestas commodo magna.
+              </p>
+              <ul>
+                <li><i class="icofont-check-circled"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li><i class="icofont-check-circled"></i> Nullam commodo velit cursus auctor pharetra.</li>
+                <li><i class="icofont-check-circled"></i> Nullam commodo velit cursus auctor pharetra. </li>
+              </ul>
+
+              <button type="button" class="btn btn-link">more details</button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </section><!-- End Application Features -->
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+
+
+
+
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Name" aria-describedby="inputGroup-sizing-sm">
+
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-label="Sizing example input" placeholder="E-mail" aria-describedby="inputGroup-sizing-sm">
+
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <textarea class="form-control" placeholder="Your Message" id="floatingTextarea2" style="height: 100px"></textarea>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Order Placement</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Videos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Discussions</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Digico Labs (Pvt) Ltd.</h3>
+              <p>
+                No: 113, Hospital road, Kalubowila<br>
+                Dehiwala<br><br>
+                <strong>Phone:</strong> 0777 667 795<br>
+                <strong>Email:</strong> careers@digicolabs.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Digico Labs (Pvt) Ltd</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+</body>
+</html>
